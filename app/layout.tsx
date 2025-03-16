@@ -12,12 +12,12 @@ const inter = Inter({
 })
 
 export const metadata = {
-  metadataBase: new URL('https://aircoinstallatiegeleen.nl'),
+  metadataBase: new URL('https://aircoinstallatiekerkrade.nl'),
   title: {
-    default: 'Airco Installatie Geleen | StayCool Airco | Gratis Offerte Binnen 24 Uur ✓',
-    template: '%s | StayCool Airco Geleen'
+    default: 'Airco Installatie Kerkrade | StayCool Airco | Gratis Offerte Binnen 24 Uur ✓',
+    template: '%s | StayCool Airco Kerkrade'
   },
-  description: 'Dé airco specialist in Geleen! ✓ Professionele installatie door StayCool Airco ✓ Erkend installateur ✓ Alle topmerken ✓ Binnen 24 uur reactie ✓ Beste prijs-kwaliteit ✓ 5 jaar garantie. Bel nu: 046 202 1430',
+  description: 'Dé airco specialist in Kerkrade! ✓ Professionele installatie door StayCool Airco ✓ Erkend installateur ✓ Alle topmerken ✓ Binnen 24 uur reactie ✓ Beste prijs-kwaliteit ✓ 5 jaar garantie. Bel nu: 046 202 1430',
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -30,18 +30,18 @@ export const metadata = {
   },
   keywords: [
     // Primaire zoektermen
-    'airco installatie geleen',
-    'airco specialist geleen',
-    'airco monteur geleen',
-    'airco bedrijf geleen',
-    'airconditioning geleen',
+    'airco installatie kerkrade',
+    'airco specialist kerkrade',
+    'airco monteur kerkrade',
+    'airco bedrijf kerkrade',
+    'airconditioning kerkrade',
     
     // Installatie en service
     'professionele airco installatie',
     'airco installatie kosten',
     'split airco installatie',
-    'multisplit airco geleen',
-    'airco onderhoud geleen',
+    'multisplit airco kerkrade',
+    'airco onderhoud kerkrade',
     'airco storing oplossen',
     'snelle airco service',
     
@@ -59,14 +59,14 @@ export const metadata = {
     'beste airco voor thuis',
     
     // Commercieel
-    'airco kopen geleen',
-    'airco geleen prijzen',
+    'airco kopen kerkrade',
+    'airco kerkrade prijzen',
     'airco prijsvergelijking',
     'airco financiering',
     'goedkope airco installatie',
     
     // Expertise en advies
-    'airco showroom geleen',
+    'airco showroom kerkrade',
     'airco advies op maat',
     'gecertificeerde airco monteurs',
     'airco merken',
@@ -95,28 +95,28 @@ export const metadata = {
     type: 'website',
     locale: 'nl_NL',
     url: '/',
-    siteName: 'StayCool Airco Geleen',
-    title: 'Airco Installatie Geleen | StayCool Airco | Gratis Offerte Binnen 24 Uur ✓',
-    description: 'Dé airco specialist in Geleen! ✓ Professionele installatie door StayCool Airco ✓ Erkend installateur ✓ Alle topmerken ✓ Binnen 24 uur reactie ✓ Beste prijs-kwaliteit',
+    siteName: 'StayCool Airco Kerkrade',
+    title: 'Airco Installatie Kerkrade | StayCool Airco | Gratis Offerte Binnen 24 Uur ✓',
+    description: 'Dé airco specialist in Kerkrade! ✓ Professionele installatie door StayCool Airco ✓ Erkend installateur ✓ Alle topmerken ✓ Binnen 24 uur reactie ✓ Beste prijs-kwaliteit',
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'StayCool Airco Geleen - Professionele Airconditioning Services'
+        alt: 'StayCool Airco Kerkrade - Professionele Airconditioning Services'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Airco Installatie Geleen | StayCool Airco | Gratis Offerte Binnen 24 Uur ✓',
-    description: 'Dé airco specialist in Geleen! ✓ Professionele installatie door StayCool Airco ✓ Erkend installateur ✓ Alle topmerken ✓ Binnen 24 uur reactie',
+    title: 'Airco Installatie Kerkrade | StayCool Airco | Gratis Offerte Binnen 24 Uur ✓',
+    description: 'Dé airco specialist in Kerkrade! ✓ Professionele installatie door StayCool Airco ✓ Erkend installateur ✓ Alle topmerken ✓ Binnen 24 uur reactie',
     images: ['/opengraph-image'],
     creator: '@staycoolairco',
     site: '@staycoolairco'
   },
   alternates: {
-    canonical: 'https://aircoinstallatiegeleen.nl'
+    canonical: 'https://aircoinstallatiekerkrade.nl'
   },
   robots: {
     index: true,
@@ -130,7 +130,7 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'TLya2mlO2DdLM9RyC_Qm6WKEHbz2sTrnOxywNFib_4s',
+    google: 'UTL5B_6L73LVe5GKdBqxLMrghGuIEMbZbiLJMwj1g6w',
     yandex: 'verification_token',
     yahoo: 'verification_token',
   }
