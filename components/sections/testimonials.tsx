@@ -4,19 +4,19 @@ import { Star } from "lucide-react"
 const testimonials = [
   {
     name: "Peter van der Berg",
-    location: "Maastricht",
+    location: "Kerkrade",
     text: "Uitstekende service! De installatie was snel en netjes uitgevoerd. Zeer tevreden met het resultaat.",
     rating: 5
   },
   {
     name: "Lisa Janssen",
-    location: "Venlo",
+    location: "Kerkrade",
     text: "Professioneel advies en goede nazorg. Een aanrader voor iedereen die een airco zoekt.",
     rating: 5
   },
   {
     name: "Mark Hendrix",
-    location: "Roermond",
+    location: "Heerlen",
     text: "Snelle reactie op mijn aanvraag en zeer concurrerende prijzen. Top service!",
     rating: 5
   }
