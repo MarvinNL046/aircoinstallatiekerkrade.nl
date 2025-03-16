@@ -17,19 +17,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!article) {
     return {
-      title: "Artikel niet gevonden | Airco Offerte Limburg",
+      title: "Artikel niet gevonden | StayCool Airco Kerkrade",
       description: "Het opgevraagde artikel bestaat niet.",
     }
   }
 
   return {
-    title: `${article.title} | Kennisbank | Airco Offerte Limburg`,
+    title: `${article.title} | Kennisbank | StayCool Airco Kerkrade`,
     description: article.description,
     openGraph: {
-      title: `${article.title} | Kennisbank | Airco Offerte Limburg`,
+      title: `${article.title} | Kennisbank | StayCool Airco Kerkrade`,
       description: article.description,
-      url: `https://aircooffertelimburg.nl/kennisbank/${params.slug}`,
-      siteName: "Airco Offerte Limburg",
+      url: `https://aircoinstallatiekerkrade.nl/kennisbank/${params.slug}`,
+      siteName: "StayCool Airco Kerkrade",
       locale: "nl_NL",
       type: "article",
     },

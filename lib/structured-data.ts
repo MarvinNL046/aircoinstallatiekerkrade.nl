@@ -4,9 +4,9 @@ export function generateOrganizationSchema(): WithContext<Organization> {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Airco Offerte Limburg",
-    url: "https://aircooffertelimburg.nl",
-    logo: "https://aircooffertelimburg.nl/logo.png",
+    name: "StayCool Airco Kerkrade",
+    url: "https://aircoinstallatiekerkrade.nl",
+    logo: "https://aircoinstallatiekerkrade.nl/logo.png",
     description: "Professionele airconditioning services in Limburg",
     address: {
       "@type": "PostalAddress",
@@ -19,9 +19,9 @@ export function generateOrganizationSchema(): WithContext<Organization> {
       contactType: "customer service",
     },
     sameAs: [
-      "https://facebook.com/aircooffertelimburg",
-      "https://instagram.com/aircooffertelimburg",
-      "https://linkedin.com/company/aircooffertelimburg",
+      "https://facebook.com/staycoolairco",
+      "https://instagram.com/staycoolairco",
+      "https://linkedin.com/company/staycoolairco",
     ],
   }
 }
@@ -38,7 +38,7 @@ export function generateServiceSchema(service: {
     description: service.description,
     provider: {
       "@type": "Organization",
-      name: "Airco Offerte Limburg",
+      name: "StayCool Airco Kerkrade",
     },
     areaServed: {
       "@type": "State",
@@ -59,9 +59,9 @@ export function generateLocalBusinessSchema(city: string): WithContext<LocalBusi
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: `Airco Offerte Limburg - ${city}`,
+    name: `StayCool Airco Kerkrade - ${city}`,
     description: `Professionele airconditioning installatie en onderhoud in ${city}. Erkend en gecertificeerd installateur.`,
-    url: `https://aircooffertelimburg.nl/steden/${city.toLowerCase()}`,
+    url: `https://aircoinstallatiekerkrade.nl/steden/${city.toLowerCase()}`,
     telephone: "+31462021430",
     email: "info@staycoolairco.nl",
     areaServed: {

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://aircoinstallatiegeleen.nl'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://aircoinstallatiekerkrade.nl'
   
   return {
     rules: {

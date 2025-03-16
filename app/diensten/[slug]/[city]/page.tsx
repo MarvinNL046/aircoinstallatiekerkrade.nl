@@ -37,7 +37,7 @@ export function generateMetadata({ params }: Props): Metadata {
   
   if (!dienst) return {}
 
-  const title = `${dienst.title} in ${cityName} | Airco Offerte Limburg`
+  const title = `${dienst.title} in ${cityName} | StayCool Airco Kerkrade`
   const description = `Professionele ${dienst.title.toLowerCase()} in ${cityName}. ✓ Erkend ✓ Gecertificeerd ✓ Vakkundig. ${dienst.description}`
 
   return {
@@ -46,13 +46,13 @@ export function generateMetadata({ params }: Props): Metadata {
     openGraph: {
       title,
       description,
-      url: `https://aircooffertelimburg.nl/diensten/${params.slug}/${params.city}`,
-      siteName: "Airco Offerte Limburg",
+      url: `https://aircoinstallatiekerkrade.nl/diensten/${params.slug}/${params.city}`,
+      siteName: "StayCool Airco Kerkrade",
       locale: "nl_NL",
       type: "website",
     },
     alternates: {
-      canonical: `https://aircooffertelimburg.nl/diensten/${params.slug}/${params.city}`,
+      canonical: `https://aircoinstallatiekerkrade.nl/diensten/${params.slug}/${params.city}`,
     },
     keywords: [
       `${dienst.title} ${cityName}`,
