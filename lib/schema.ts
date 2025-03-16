@@ -4,13 +4,13 @@ export function generateOrganizationSchema(): WithContext<Organization> {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "StayCool Airco Geleen",
-    url: "https://aircoinstallatiegeleen.nl",
+    name: "StayCool Airco Kerkrade",
+    url: "https://aircoinstallatiekerkrade.nl",
     logo: "https://staycoolairco.nl/logo.png",
-    description: "Professionele airconditioning installatie in Geleen door StayCool Airco",
+    description: "Professionele airconditioning installatie in Kerkrade door StayCool Airco",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Geleen",
+      addressLocality: "Kerkrade",
       addressRegion: "Limburg",
       addressCountry: "NL",
     },
@@ -27,7 +27,7 @@ export function generateOrganizationSchema(): WithContext<Organization> {
     ],
     areaServed: {
       "@type": "City",
-      name: "Geleen",
+      name: "Kerkrade",
     }
   }
 }
@@ -48,7 +48,7 @@ export function generateServiceSchema(service: {
     },
     areaServed: {
       "@type": "City",
-      name: "Geleen",
+      name: "Kerkrade",
     },
     offers: {
       "@type": "Offer",
@@ -67,7 +67,7 @@ export function generateLocalBusinessSchema(city: string): WithContext<LocalBusi
     "@type": "LocalBusiness",
     name: `StayCool Airco - Airco Installatie ${city}`,
     description: `Professionele airconditioning installatie en onderhoud in ${city} door StayCool Airco. Erkend en gecertificeerd installateur.`,
-    url: `https://aircoinstallatiegeleen.nl/steden/${city.toLowerCase()}`,
+    url: `https://aircoinstallatiekerkrade.nl/steden/${city.toLowerCase()}`,
     telephone: "+31462021430",
     email: "info@staycoolairco.nl",
     areaServed: {
@@ -95,7 +95,7 @@ export function generateBreadcrumbSchema(items: { name: string; item: string }[]
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `https://aircoinstallatiegeleen.nl${item.item}`,
+      item: `https://aircoinstallatiekerkrade.nl${item.item}`,
     })),
   }
 }
