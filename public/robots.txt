@@ -1,0 +1,15 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+
+# Host
+Host: https://aircoinstallatiegeleen.nl
+
+# Sitemaps
+Sitemap: https://aircoinstallatiegeleen.nl/sitemap.xml
+Sitemap: https://aircoinstallatiegeleen.nl/sitemap-locations.xml
+Sitemap: https://aircoinstallatiegeleen.nl/sitemap-services.xml
