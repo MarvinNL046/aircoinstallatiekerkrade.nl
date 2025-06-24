@@ -14,19 +14,19 @@ const cities = [
 
 export function Footer() {
   return (
-    <footer className="border-t bg-blue-900 text-white">
+    <footer className="border-t bg-gray-900 text-white">
       <div className="container py-12">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div>
             <div className="flex items-center space-x-2">
-              <AirVent className="h-6 w-6" />
-              <span className="font-bold">StayCool Airco Geleen</span>
+              <AirVent className="h-6 w-6 text-orange-500" />
+              <span className="font-bold">StayCool Airco Kerkrade</span>
             </div>
-            <p className="mt-4 text-sm text-blue-200">
-              Professionele airconditioning installatie in Geleen en omgeving. Erkend en gecertificeerd.
+            <p className="mt-4 text-sm text-gray-300">
+              Professionele airconditioning installatie in Kerkrade en heel Limburg. Erkend en gecertificeerd.
             </p>
-            <p className="mt-2 text-sm text-blue-200">
-              <a href="https://staycoolairco.nl" className="underline hover:text-white" target="_blank" rel="noopener noreferrer">
+            <p className="mt-2 text-sm text-gray-300">
+              <a href="https://staycoolairco.nl" className="text-orange-500 hover:text-orange-400 underline" target="_blank" rel="noopener noreferrer">
                 Bezoek onze hoofdwebsite
               </a>
             </p>
@@ -49,7 +49,7 @@ export function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span>Geleen en omgeving</span>
+                <span>Kerkrade en heel Limburg</span>
               </li>
             </ul>
           </div>
@@ -58,42 +58,42 @@ export function Footer() {
             <h3 className="font-semibold">Navigatie</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
-                <Link href="/diensten" className="hover:text-blue-200">
+                <Link href="/diensten" className="hover:text-orange-400 transition-colors">
                   Diensten
                 </Link>
               </li>
               <li>
-                <Link href="/steden" className="hover:text-blue-200">
+                <Link href="/steden" className="hover:text-orange-400 transition-colors">
                   Steden
                 </Link>
               </li>
               <li>
-                <Link href="/merken" className="hover:text-blue-200">
+                <Link href="/merken" className="hover:text-orange-400 transition-colors">
                   Merken
                 </Link>
               </li>
               <li>
-                <Link href="/kennisbank" className="hover:text-blue-200">
+                <Link href="/kennisbank" className="hover:text-orange-400 transition-colors">
                   Kennisbank
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-blue-200">
+                <Link href="/blog" className="hover:text-orange-400 transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-blue-200">
+                <Link href="/faq" className="hover:text-orange-400 transition-colors">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/over-ons" className="hover:text-blue-200">
+                <Link href="/over-ons" className="hover:text-orange-400 transition-colors">
                   Over Ons
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-blue-200">
+                <Link href="/contact" className="hover:text-orange-400 transition-colors">
                   Contact
                 </Link>
               </li>
@@ -105,7 +105,7 @@ export function Footer() {
             <ul className="mt-4 grid grid-cols-2 gap-2 text-sm">
               {cities.map((city) => (
                 <li key={city}>
-                  <Link href={`/steden/${city.toLowerCase()}`} className="hover:text-blue-200">
+                  <Link href={`/steden/${city.toLowerCase()}`} className="hover:text-orange-400 transition-colors">
                     {city}
                   </Link>
                 </li>
@@ -114,8 +114,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-blue-800 pt-8 text-center text-sm text-blue-200">
-          <p>© {new Date().getFullYear()} StayCool Airco. Alle rechten voorbehouden.</p>
+        <div className="mt-8 border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
+          <p>© {new Date().getFullYear()} StayCool Airco Kerkrade. Alle rechten voorbehouden.</p>
         </div>
       </div>
     </footer>

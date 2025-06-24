@@ -12,6 +12,7 @@ import { AirVent, Menu, Phone } from "lucide-react"
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Diensten", href: "/diensten" },
+  { name: "Producten", href: "/producten" },
   { name: "Steden", href: "/steden" },
   { name: "Merken", href: "/merken" },
   { name: "Kennisbank", href: "/kennisbank" },
@@ -33,11 +34,11 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <Link 
           href="/" 
-          className="flex items-center space-x-2 text-blue-600"
+          className="flex items-center space-x-2 text-gray-900 hover:text-orange-500 transition-colors"
           aria-label="StayCool Airco Kerkrade - Home"
         >
-          <AirVent className="h-6 w-6" aria-hidden="true" />
-          <span className="font-bold">StayCool Airco Kerkrade</span>
+          <AirVent className="h-6 w-6 text-orange-500" aria-hidden="true" />
+          <span className="font-bold text-lg">StayCool Airco</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -48,8 +49,8 @@ export function Header() {
                 <Link href={item.href} legacyBehavior passHref>
                   <NavigationMenuLink
                     className={cn(
-                      "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-blue-50 hover:text-blue-600 focus:bg-blue-50 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50",
-                      pathname === item.href && "bg-blue-50 text-blue-600"
+                      "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-orange-50 hover:text-orange-600 focus:bg-orange-50 focus:text-orange-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                      pathname === item.href && "bg-orange-50 text-orange-600 font-semibold"
                     )}
                     role="menuitem"
                     aria-current={pathname === item.href ? "page" : undefined}
@@ -83,8 +84,8 @@ export function Header() {
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      "px-4 py-2 text-sm font-medium transition-colors hover:bg-blue-50 hover:text-blue-600 rounded-md",
-                      pathname === item.href && "bg-blue-50 text-blue-600"
+                      "px-4 py-2 text-sm font-medium transition-colors hover:bg-orange-50 hover:text-orange-600 rounded-md",
+                      pathname === item.href && "bg-orange-50 text-orange-600 font-semibold"
                     )}
                     onClick={() => setIsOpen(false)}
                   >
@@ -92,8 +93,8 @@ export function Header() {
                   </Link>
                 ))}
                 <Link href="/offerte" onClick={() => setIsOpen(false)}>
-                  <Button className="w-full bg-green-600 hover:bg-green-700">
-                    Offerte Aanvragen
+                  <Button className="w-full btn-primary">
+                    Gratis Offerte
                   </Button>
                 </Link>
               </nav>
@@ -105,10 +106,10 @@ export function Header() {
         <div className="hidden lg:block">
           <Link href="/offerte">
             <Button 
-              className="bg-green-600 hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-              aria-label="Vraag een offerte aan"
+              className="btn-primary"
+              aria-label="Vraag een gratis offerte aan"
             >
-              Offerte Aanvragen
+              Gratis Offerte
             </Button>
           </Link>
         </div>

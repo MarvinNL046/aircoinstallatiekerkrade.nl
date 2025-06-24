@@ -1,51 +1,55 @@
+/* Inter font will be loaded via next/font for better performance */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* StayCool Design System - Light Mode */
+    --background: 0 0% 100%; /* white */
+    --foreground: 224 71.4% 4.1%; /* gray-900 */
+    --card: 0 0% 100%; /* white */
+    --card-foreground: 224 71.4% 4.1%; /* gray-900 */
+    --popover: 0 0% 100%; /* white */
+    --popover-foreground: 224 71.4% 4.1%; /* gray-900 */
+    --primary: 25 95.3% 53.1%; /* orange-500 */
+    --primary-foreground: 0 0% 100%; /* white */
+    --secondary: 221 83.2% 53.3%; /* blue-600 */
+    --secondary-foreground: 0 0% 100%; /* white */
+    --muted: 210 20% 98%; /* gray-50 */
+    --muted-foreground: 220 8.9% 46.1%; /* gray-600 */
+    --accent: 25 95.3% 53.1%; /* orange-500 */
+    --accent-foreground: 0 0% 100%; /* white */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --ring: 25 95.3% 53.1%; /* orange-500 */
     --radius: 0.5rem;
   }
  
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* StayCool Design System - Dark Mode */
+    --background: 224 71.4% 4.1%; /* gray-900 */
+    --foreground: 210 20% 98%; /* gray-50 */
+    --card: 220 13% 12%; /* gray-800 with adjustment */
+    --card-foreground: 210 20% 98%; /* gray-50 */
+    --popover: 220 13% 12%; /* gray-800 with adjustment */
+    --popover-foreground: 210 20% 98%; /* gray-50 */
+    --primary: 25 95.3% 53.1%; /* orange-500 */
+    --primary-foreground: 0 0% 100%; /* white */
+    --secondary: 221 83.2% 53.3%; /* blue-600 */
+    --secondary-foreground: 0 0% 100%; /* white */
+    --muted: 215 13.8% 16.3%; /* gray-800 variant */
+    --muted-foreground: 210 14.3% 73.3%; /* gray-300 variant */
+    --accent: 25 95.3% 53.1%; /* orange-500 */
+    --accent-foreground: 0 0% 100%; /* white */
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 13.8% 16.3%;
+    --input: 215 13.8% 16.3%;
+    --ring: 25 95.3% 53.1%; /* orange-500 */
   }
 }
 
@@ -93,4 +97,60 @@ grammarly-desktop-integration {
 
 .bg-grid-white\/\[0\.2\] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.2)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+
+/* StayCool Design System Components */
+@layer components {
+  /* Primary CTA Button */
+  .btn-primary {
+    @apply bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200;
+  }
+  
+  /* Secondary Button */
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-800 font-semibold py-3 px-6 rounded-lg border-2 border-gray-300 hover:border-gray-400 transition-all duration-200;
+  }
+  
+  /* Card Component */
+  .card-staycool {
+    @apply bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+  
+  /* Input Styling */
+  .input-staycool {
+    @apply border border-gray-300 rounded-lg px-4 py-3 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all duration-200;
+  }
+  
+  /* Gradient Background */
+  .gradient-hero {
+    @apply bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900;
+  }
+  
+  /* Glassmorphic Effect */
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+}
+
+/* Typewriter Animation */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.typewriter-text {
+  overflow: hidden;
+  border-right: 3px solid #F97316;
+  white-space: nowrap;
+  animation: typewriter 3s steps(40, end), blink 0.75s step-end infinite;
 }

@@ -1,23 +1,34 @@
 import { Metadata } from "next"
-import { HeroSection } from "@/components/sections/hero-section"
-import { FeaturesSection } from "@/components/sections/features-section"
-import { ServicesSection } from "@/components/sections/services-section"
+import { HeroOptimized } from "@/components/sections/HeroOptimized"
+import { ServicesOptimized } from "@/components/sections/ServicesOptimized"
+import { ProductShowcase } from "@/components/sections/ProductShowcase"
+import { WhyUs } from "@/components/sections/WhyUs"
+import { BrandLogos } from "@/components/sections/BrandLogos"
+import { ContactOptimized } from "@/components/sections/ContactOptimized"
 import { TestimonialsSection } from "@/components/sections/testimonials"
-import { CTASection } from "@/components/sections/cta-section"
 import { CTABanner } from "@/components/sections/cta-banner"
 import { generateOrganizationSchema } from "@/lib/schema"
+import { generateReviewSchema } from "@/lib/review-schema"
 import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: 'StayCool Airco Kerkrade | #1 in Airconditioning ✓',
-  description: 'Dé airco specialist van Kerkrade! Professionele airco installatie voor woning en bedrijf door StayCool Airco. ✓ Gratis offerte ✓ Erkend installateur ✓ Alle topmerken ✓ 5 jaar garantie. Bel: 046 202 1430',
+  title: 'Airco Installatie Kerkrade | Erkende Airconditioning Monteur ✓ Gratis Offerte',
+  description: 'Airco installateur Kerkrade ➤ Professionele airconditioning installatie, onderhoud & reparatie ✓ F-gassen gecertificeerd ✓ Gratis offerte binnen 24u ✓ Alle topmerken ✓ Bel 046 202 1430',
   alternates: {
     canonical: 'https://aircoinstallatiekerkrade.nl'
+  },
+  keywords: 'airco installatie kerkrade, airconditioning kerkrade, airco monteur kerkrade, airco installateur kerkrade, klimaatbeheersing kerkrade, warmtepomp kerkrade',
+  openGraph: {
+    title: 'Airco Installatie Kerkrade | Erkende Monteur | Gratis Offerte',
+    description: 'Professionele airco installatie in Kerkrade. F-gassen gecertificeerde monteurs. Gratis offerte binnen 24 uur!',
+    type: 'website',
+    locale: 'nl_NL',
   }
 }
 
 export default function HomePage() {
   const organizationSchema = generateOrganizationSchema()
+  const reviewSchema = generateReviewSchema()
 
   return (
     <>
@@ -26,43 +37,20 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
+      <Script
+        id="review-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
       
       <main>
-        <CTABanner theme="light" />
-        <HeroSection />
-        <FeaturesSection />
-        <ServicesSection />
-        <section className="py-16 bg-gray-50">
-          <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-8">Bekijk Onze Bedrijfsvideo</h2>
-            <div className="max-w-3xl mx-auto aspect-video">
-              <iframe 
-                className="w-full h-full rounded-lg shadow-lg"
-                src="https://www.youtube.com/embed/9m-jkGgfLog" 
-                title="StayCool Airco Bedrijfsvideo" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
-            </div>
-            <div className="text-center mt-8">
-              <p className="text-lg text-muted-foreground">
-                Ontdek hoe StayCool Airco uw ideale partner is voor airconditioning in Kerkrade en omgeving.
-              </p>
-              <p className="mt-4">
-                <a 
-                  href="https://staycoolairco.nl" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
-                >
-                  Bezoek onze hoofdwebsite voor meer informatie
-                </a>
-              </p>
-            </div>
-          </div>
-        </section>
+        <HeroOptimized />
+        <ServicesOptimized />
+        <ProductShowcase />
+        <WhyUs />
         <TestimonialsSection />
-        <CTASection />
+        <BrandLogos />
+        <ContactOptimized />
         <CTABanner theme="dark" />
       </main>
     </>

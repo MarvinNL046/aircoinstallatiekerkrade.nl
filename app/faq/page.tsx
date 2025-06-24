@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import Script from "next/script"
 import {
   Accordion,
   AccordionContent,
@@ -41,8 +42,27 @@ export default function FAQPage() {
     { label: "FAQ", href: "/faq" }
   ];
 
+  // Generate FAQ Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container py-12">
         <Breadcrumb items={breadcrumbItems} />
         <h1 className="mb-8 text-4xl font-bold">Veelgestelde Vragen</h1>

@@ -9,9 +9,9 @@ interface CTABannerProps {
 }
 
 export function CTABanner({ theme = "light" }: CTABannerProps) {
-  const bgColor = theme === "light" ? "bg-blue-50" : "bg-blue-900"
-  const textColor = theme === "light" ? "text-blue-900" : "text-white"
-  const borderColor = theme === "light" ? "border-blue-100" : "border-blue-800"
+  const bgColor = theme === "light" ? "bg-orange-50" : "bg-gray-800"
+  const textColor = theme === "light" ? "text-gray-900" : "text-white"
+  const borderColor = theme === "light" ? "border-orange-100" : "border-gray-700"
 
   return (
     <div 
@@ -20,19 +20,19 @@ export function CTABanner({ theme = "light" }: CTABannerProps) {
       <div className="container">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className={`${textColor} text-sm font-medium`}>
-            <span className="hidden sm:inline">❄️</span> Laat uw airco installeren in Kerkrade en geniet van een korting tot wel € 250,-!
+            <span className="hidden sm:inline">❄️</span> Professionele airco installatie in Kerkrade - Gratis offerte binnen 24 uur!
           </p>
           <div className="flex flex-wrap gap-2">
-            <Button size="sm" variant="outline" asChild>
+            <Button size="sm" variant="outline" className="border-orange-300 text-orange-700 hover:bg-orange-100" asChild>
               <Link href="tel:0462021430">
                 <Phone className="mr-2 h-4 w-4" />
                 Bel 046 202 1430
               </Link>
             </Button>
-            <Button size="sm" className="bg-green-600 hover:bg-green-700" asChild>
+            <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-white" asChild>
               <Link href="/offerte">
                 <Calendar className="mr-2 h-4 w-4" />
-                Plan Afspraak
+                Gratis Offerte
               </Link>
             </Button>
           </div>
