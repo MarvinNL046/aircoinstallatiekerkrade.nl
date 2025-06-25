@@ -93,7 +93,7 @@ const productCategories = {
         images: [
           '/images/daikin-perfera-wit.webp',
           '/images/Perfera-vloermodel-left.webp',
-          '/images/Perfera vloermodel-right.webp'
+          '/images/Perfera_vloermodel-right.webp'
         ],
         features: ['Vloer & Wand Montage', 'Warmtepomp', 'R32 Koudemiddel'],
         cta: 'Vraag uw persoonlijke prijs aan'
@@ -109,9 +109,9 @@ const productCategories = {
         name: 'Daiseikai 10',
         series: 'Premium Performance',
         images: [
-          '/images/Daiseikai 10-Wit-vooraanzicht_4_11zon.webp',
-          '/images/Daiseikai 10-Wit-rechts_3_11zon.webp',
-          '/images/Daiseikai 10-Hout-vooraanzicht_2_11zon.webp'
+          '/images/Daiseikai_10-Wit-vooraanzicht_4_11zon.webp',
+          '/images/Daiseikai_10-Wit-rechts_3_11zon.webp',
+          '/images/Daiseikai_10-Hout-vooraanzicht_2_11zon.webp'
         ],
         features: ['Plasma Ionizer', 'Ultra Pure Filter', 'Magic Coil'],
         cta: 'Zuiverste lucht voor uw gezin',
@@ -172,9 +172,9 @@ const productCategories = {
         name: 'WindFree™ Elite',
         series: 'Premium Wind-Free',
         images: [
-          '/images/samsung/windfreeElite/WindFree Elite_S2_Front_Web_RGB.webp',
-          '/images/samsung/windfreeElite/Samsung RAC WindFree Elite_Sfeerbeeld_001.webp',
-          '/images/samsung/windfreeElite/Samsung RAC WindFree Elite_Sfeerbeeld_002.webp'
+          '/images/samsung/windfreeElite/WindFree_Elite_S2_Front_Web_RGB.webp',
+          '/images/samsung/windfreeElite/Samsung_RAC_WindFree_Elite_Sfeerbeeld_001.webp',
+          '/images/samsung/windfreeElite/Samsung_RAC_WindFree_Elite_Sfeerbeeld_002.webp'
         ],
         features: ['WindFree™ Cooling', 'SmartThings', '8-weg luchtstroom'],
         cta: 'Premium comfort op maat',
@@ -184,8 +184,8 @@ const productCategories = {
         name: 'WindFree™ Comfort',
         series: 'Comfort Series',
         images: [
-          '/images/samsung/windfreeComfort/WindFree Comfort_S2_Front_Web_RGB.webp',
-          '/images/samsung/windfreeComfort/Samsung RAC WindFree Comfort_Sfeerbeeld_001.webp'
+          '/images/samsung/windfreeComfort/WindFree_Comfort_S2_Front_Web_RGB.webp',
+          '/images/samsung/windfreeComfort/Samsung_RAC_WindFree_Comfort_Sfeerbeeld_001.webp'
         ],
         features: ['WindFree™ Mode', 'Digital Inverter', 'Fast Cooling'],
         cta: 'Gratis adviesgesprek'
@@ -195,7 +195,7 @@ const productCategories = {
         series: 'Essential Comfort',
         images: [
           '/images/samsung/luzon/Luzon_S2_Front_Web_RGB.webp',
-          '/images/samsung/luzon/Samsung RAC Luzon_Sfeerbeeld_001.webp'
+          '/images/samsung/luzon/Samsung_RAC_Luzon_Sfeerbeeld_001.webp'
         ],
         features: ['Tri-Care Filter', 'Good Sleep Mode', 'Easy Filter'],
         cta: 'Maatwerk offerte binnen 24u'

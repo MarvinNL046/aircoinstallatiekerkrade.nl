@@ -83,7 +83,7 @@ export function ServicesOptimized() {
               { name: 'Tosot Cosmo', image: '/images/787-cosmo-indoor-vooraanzicht.webp', badge: 'Beste Koop' },
               { name: 'Toshiba Haori', image: '/images/Haori-zwart-vooraanzicht_3_11zon.webp', badge: 'Textiel Design' },
               { name: 'Daikin Emura', image: '/images/daikin-emura-wit.webp', badge: 'Design Award' },
-              { name: 'Toshiba Daiseikai', image: '/images/Daiseikai 10-Wit-vooraanzicht_4_11zon.webp', badge: 'Plasma Filter' }
+              { name: 'Toshiba Daiseikai', image: '/images/Daiseikai_10-Wit-vooraanzicht_4_11zon.webp', badge: 'Plasma Filter' }
             ].map((product, index) => (
               <div key={index} className="group cursor-pointer">
                 <div className="aspect-square bg-gray-50 rounded-xl overflow-hidden mb-4">
