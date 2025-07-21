@@ -13,7 +13,7 @@ import {
   MessageSquare,
   CheckCircle
 } from 'lucide-react';
-import { sendEmail } from '@/lib/emailjs';
+import { sendEmail } from '@/utils/email';
 import { useToast } from '@/hooks/use-toast';
 
 const contactInfo = [

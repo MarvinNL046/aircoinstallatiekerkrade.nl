@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { AirVent, Phone, Star, CheckCircle2, ArrowRight, Clock } from 'lucide-react';
-import { sendEmail } from '@/lib/emailjs';
+import { sendEmail } from '@/utils/email';
 import { useToast } from '@/hooks/use-toast';
 
 const rotatingTexts = [
