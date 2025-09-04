@@ -11,12 +11,21 @@ import {
   Clock, 
   Send,
   MessageSquare,
-  CheckCircle
+  CheckCircle,
+  Calendar
 } from 'lucide-react';
 import { sendEmail } from '@/utils/email';
 import { useToast } from '@/hooks/use-toast';
 
 const contactInfo = [
+  {
+    icon: Calendar,
+    title: 'Online Afspraak',
+    content: 'Direct inplannen',
+    link: 'https://afspraken.staycoolairco.nl/',
+    isExternal: true,
+    isPrimary: true,
+  },
   {
     icon: Phone,
     title: 'Telefoon',
@@ -90,9 +99,23 @@ export function ContactOptimized() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mb-4">
             Contact Airco Specialist Kerkrade
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
             <strong>Direct contact</strong> met uw lokale airco installateur. Vragen over airconditioning? Gratis offerte nodig? Wij helpen u graag!
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://afspraken.staycoolairco.nl/" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="btn-primary animate-pulse-subtle">
+                <Calendar className="mr-2 h-5 w-5" />
+                Plan Direct Online Een Afspraak
+              </Button>
+            </a>
+            <a href="tel:0462021430">
+              <Button size="lg" variant="outline" className="border-orange-500 text-orange-600 hover:bg-orange-50">
+                <Phone className="mr-2 h-5 w-5" />
+                Bel 046 202 1430
+              </Button>
+            </a>
+          </div>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-2">
@@ -103,16 +126,18 @@ export function ContactOptimized() {
               {contactInfo.map((item, index) => {
                 const Icon = item.icon;
                 return (
-                  <div key={index} className="flex items-start gap-4">
-                    <div className="flex-shrink-0 h-12 w-12 bg-orange-100 rounded-full flex items-center justify-center">
-                      <Icon className="h-6 w-6 text-orange-500" />
+                  <div key={index} className={`flex items-start gap-4 ${item.isPrimary ? 'bg-orange-50 p-4 rounded-lg border-2 border-orange-200' : ''}`}>
+                    <div className={`flex-shrink-0 h-12 w-12 ${item.isPrimary ? 'bg-orange-500' : 'bg-orange-100'} rounded-full flex items-center justify-center`}>
+                      <Icon className={`h-6 w-6 ${item.isPrimary ? 'text-white' : 'text-orange-500'}`} />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">{item.title}</h4>
                       {item.link ? (
                         <a 
                           href={item.link}
-                          className="text-blue-600 hover:text-blue-700 hover:underline"
+                          className={`${item.isPrimary ? 'text-orange-600 font-semibold' : 'text-blue-600'} hover:underline`}
+                          target={item.isExternal ? '_blank' : undefined}
+                          rel={item.isExternal ? 'noopener noreferrer' : undefined}
                         >
                           {item.content}
                         </a>

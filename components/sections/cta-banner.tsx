@@ -23,15 +23,20 @@ export function CTABanner({ theme = "light" }: CTABannerProps) {
             <span className="hidden sm:inline">❄️</span> Professionele airco installatie in Kerkrade - Gratis offerte binnen 24 uur!
           </p>
           <div className="flex flex-wrap gap-2">
+            <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-white animate-pulse-subtle" asChild>
+              <Link href="https://afspraken.staycoolairco.nl/" target="_blank" rel="noopener noreferrer">
+                <Calendar className="mr-2 h-4 w-4" />
+                Online Afspraak
+              </Link>
+            </Button>
             <Button size="sm" variant="outline" className="border-orange-300 text-orange-700 hover:bg-orange-100" asChild>
               <Link href="tel:0462021430">
                 <Phone className="mr-2 h-4 w-4" />
-                Bel 046 202 1430
+                Bel Direct
               </Link>
             </Button>
-            <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-white" asChild>
+            <Button size="sm" variant="outline" className="border-orange-300 text-orange-700 hover:bg-orange-100" asChild>
               <Link href="/offerte">
-                <Calendar className="mr-2 h-4 w-4" />
                 Gratis Offerte
               </Link>
             </Button>

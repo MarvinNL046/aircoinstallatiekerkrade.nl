@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { AirVent, Phone, Star, CheckCircle2, ArrowRight, Clock } from 'lucide-react';
+import { AirVent, Phone, Star, CheckCircle2, ArrowRight, Clock, Calendar } from 'lucide-react';
 import { sendEmail } from '@/utils/email';
 import { useToast } from '@/hooks/use-toast';
 
@@ -116,22 +116,32 @@ export function HeroOptimized() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col gap-4 sm:flex-row">
+              <Link href="https://afspraken.staycoolairco.nl/" target="_blank" rel="noopener noreferrer">
+                <Button 
+                  size="lg" 
+                  className="btn-primary w-full sm:w-auto animate-pulse-subtle"
+                >
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Direct Online Afspraak Maken
+                </Button>
+              </Link>
               <Link href="tel:0462021430">
                 <Button 
                   size="lg" 
-                  className="btn-primary w-full sm:w-auto"
+                  className="btn-secondary w-full sm:w-auto"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Bel Nu: 046 202 1430
+                  Bel: 046 202 1430
                 </Button>
               </Link>
               <Link href="#form" className="scroll-smooth">
                 <Button 
                   size="lg" 
-                  className="btn-secondary w-full sm:w-auto"
+                  variant="outline"
+                  className="w-full sm:w-auto bg-white/10 backdrop-blur text-white hover:bg-white/20 border-white/20"
                 >
                   <ArrowRight className="mr-2 h-5 w-5" />
-                  Gratis Offerte Binnen 24u
+                  Gratis Offerte
                 </Button>
               </Link>
             </div>
@@ -204,9 +214,22 @@ export function HeroOptimized() {
               </Button>
             </form>
 
-            <p className="mt-4 text-sm text-white/80 text-center">
-              Of WhatsApp: <a href="https://wa.me/31636481054" className="font-semibold hover:text-white">06 3648 1054</a>
-            </p>
+            <div className="mt-4 space-y-2">
+              <p className="text-sm text-white/80 text-center">
+                Of WhatsApp: <a href="https://wa.me/31636481054" className="font-semibold hover:text-white">06 3648 1054</a>
+              </p>
+              <div className="relative">
+                <div className="flex items-center justify-center">
+                  <span className="bg-white/10 px-3 text-sm text-white/80">of</span>
+                </div>
+                <Link href="https://afspraken.staycoolairco.nl/" target="_blank" rel="noopener noreferrer" className="block">
+                  <Button variant="outline" className="w-full bg-white/10 backdrop-blur text-white hover:bg-white/20 border-white/20">
+                    <Calendar className="mr-2 h-4 w-4" />
+                    Plan Direct Online Een Afspraak
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { AirVent, Mail, MapPin, Phone } from "lucide-react"
+import { AirVent, Mail, MapPin, Phone, Calendar } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const cities = [
   "Maastricht",
@@ -34,7 +35,15 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold">Contact</h3>
-            <ul className="mt-4 space-y-2 text-sm">
+            <div className="mt-4 mb-4">
+              <Link href="https://afspraken.staycoolairco.nl/" target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+                  <Calendar className="mr-2 h-4 w-4" />
+                  Online Afspraak Maken
+                </Button>
+              </Link>
+            </div>
+            <ul className="space-y-2 text-sm">
               <li className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
                 <span>Telefoon: 046 202 1430</span>

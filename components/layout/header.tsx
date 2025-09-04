@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { AirVent, Menu, Phone } from "lucide-react"
+import { AirVent, Menu, Phone, Calendar } from "lucide-react"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -92,8 +92,14 @@ export function Header() {
                     {item.name}
                   </Link>
                 ))}
+                <Link href="https://afspraken.staycoolairco.nl/" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
+                  <Button className="w-full btn-primary animate-pulse-subtle mb-3">
+                    <Calendar className="mr-2 h-4 w-4" />
+                    Online Afspraak Maken
+                  </Button>
+                </Link>
                 <Link href="/offerte" onClick={() => setIsOpen(false)}>
-                  <Button className="w-full btn-primary">
+                  <Button className="w-full" variant="outline">
                     Gratis Offerte
                   </Button>
                 </Link>
@@ -103,10 +109,20 @@ export function Header() {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex items-center gap-3">
+          <Link href="https://afspraken.staycoolairco.nl/" target="_blank" rel="noopener noreferrer">
+            <Button 
+              className="btn-primary animate-pulse-subtle"
+              aria-label="Plan direct een afspraak online"
+            >
+              <Calendar className="mr-2 h-4 w-4" />
+              Online Afspraak
+            </Button>
+          </Link>
           <Link href="/offerte">
             <Button 
-              className="btn-primary"
+              variant="outline"
+              className="border-orange-500 text-orange-600 hover:bg-orange-50"
               aria-label="Vraag een gratis offerte aan"
             >
               Gratis Offerte

@@ -154,3 +154,20 @@ grammarly-desktop-integration {
   white-space: nowrap;
   animation: typewriter 3s steps(40, end), blink 0.75s step-end infinite;
 }
+
+/* Subtle Pulse Animation for CTA Buttons */
+@keyframes pulse-subtle {
+  0% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(249, 115, 22, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite;
+}
