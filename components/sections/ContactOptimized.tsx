@@ -80,7 +80,11 @@ export function ContactOptimized() {
         phone: '',
         message: '',
       });
-      setTimeout(() => setIsSuccess(false), 5000);
+
+      // Redirect to thank you page
+      setTimeout(() => {
+        window.location.href = 'https://staycoolairco.nl/tot-snel';
+      }, 1500);
     } catch (error) {
       toast({
         title: 'Er ging iets mis',
